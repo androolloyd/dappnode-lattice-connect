@@ -1,0 +1,15 @@
+version: "3.4"
+services:
+  lattice-connect.public.dappnode.eth:
+    build: ./build
+    image: "lattice-connect.public.dappnode.eth:0.1.0"
+    restart: unless-stopped
+    environment:
+      - BROKER_USERNAME=connector
+      - BROKER_PASSWORD=changeMePlease
+      - MQTT_BROKER_LADDR=
+      - APP_RPC_LADDR=
+      - LOG_LEVEL=trace
+    ports:
+      - "7800:3000"
+      - "7883:1883"
