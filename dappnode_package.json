@@ -28,8 +28,9 @@
   },
   "links": {
     "homepage": "https://github.com/gridplus/lattice-connect",
-    "api": "http://lattice-connect.public.dappnode:7800",
-    "gateway": "http://lattice-connect.public.dappnode:7883"
+    "api": "http://lattice-connect.public.dappnode:3000",
+    "gateway": "http://relay.lattice-connect.public.dappnode:1883",
+    "wallet": "http://wallet.lattice-connect.public.dappnode:3000"
   },
   "license": "GPL v3"
 }

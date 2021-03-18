@@ -16,6 +16,4 @@ services:
   wallet:
     build: ./build-ui
     restart: unless-stopped
-    ports:
-      - "3001:3000"
     image: "wallet.lattice-connect.public.dappnode.eth:0.1.0"
