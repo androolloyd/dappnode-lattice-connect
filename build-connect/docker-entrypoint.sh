@@ -26,4 +26,4 @@ EOF
 
 set -ex
 
-(cd /opt/lattice && npx pm2-runtime start dist/index.js --name lattice-connect --watch)
+(cd /opt/lattice && node dist/index.js --name lattice-connect --watch)
