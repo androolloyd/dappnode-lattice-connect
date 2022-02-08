@@ -1,16 +1,22 @@
 version: "2"
 fields:
-  - id: BROKER_USERNAME
+  - id: MQTT_USERNAME
     target:
       type: environment
-      name: BROKER_USERNAME
-    title: BROKER_USERNAME
+      name: MQTT_USERNAME
+      service: relay
+    title: MQTT Broker Username
     description: >-
-      Username for the MQTT Broker
-  - id: BROKER_PASSWORD
+      Username for the MQTT Broker (Recommended: Generate Random Username)
+    secret: false
+    required: true
+  - id: MQTT_PASSWORD
     target:
       type: environment
-      name: BROKER_PASSWORD
-    title: BROKER_PASSWORD
+      name: MQTT_PASSWORD
+      service: relay
+    title: MQTT Broker Password
     description: >-
-      Password for the MQTT Broker
+      Password for the MQTT Broker (Recommended: Generate Random Password)
+    secret: true
+    required: true

@@ -1,36 +1,28 @@
 {
-  "name": "lattice-connect.public.dappnode.eth",
-  "version": "0.1.0",
+  "name": "lattice-connect.dnp.dappnode.eth",
+  "version": "0.2.0",
   "upstreamVersion": "master",
-  "upstreamRepo": "gridplus/lattice-connect",
-  "upstreamArg": "UPSTREAM_VERSION",
-  "description": "",
+  "shortDescription": "GridPlus Lattice-Connect",
+  "description": "GridPlus Lattice-Connect is a self hosted encrypted message relay for your GridPlus Lattice1",
   "type": "service",
-  "author": "androolloyd <opensource@andrewredden.com> (https://github.com/androolloyd)",
+  "architectures": ["linux/amd64", "linux/arm64"],
+  "exposable": [],
+  "author": "mysticryuujin <mysticryuujin@gmail.com> (https://github.com/mysticryuujin)",
   "contributors": [
-    "terra-project (https://github.com/terra-project)"
+    "androolloyd <opensource@andrewredden.com> (https://github.com/androolloyd)"
   ],
-  "categories": [
-    "Developer tools",
-    "Communications"
-  ],
-  "keywords": [
-    "lattice-connect", "gridplus"
-  ],
+  "categories": ["Developer tools", "Communications"],
+  "keywords": ["lattice-connect", "gridplus", "lattice1", "relay"],
   "globalEnvs": {
     "all": true
   },
-  "backup": [
-  ],
+  "backup": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/androolloyd/dappnode-lattice-connect"
+    "url": "https://github.com/mysticryuujin/dappnode-lattice-connect"
   },
   "links": {
-    "homepage": "https://github.com/gridplus/lattice-connect",
-    "api": "http://lattice-connect.public.dappnode:3000",
-    "gateway": "http://relay.lattice-connect.public.dappnode:1883",
-    "wallet": "http://wallet.lattice-connect.public.dappnode:3000"
+    "homepage": "https://github.com/MysticRyuujin/dappnode-lattice-connect"
   },
   "license": "GPL v3"
 }

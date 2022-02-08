@@ -1,19 +1,18 @@
 version: "3.4"
 services:
   relay:
-    build: ./build-connect
+    build:
+      context: ./build-connect
+      args:
+        RELEASE_TAG: v0.2.2
     restart: unless-stopped
     environment:
-      - BROKER_USERNAME=connector
-      - BROKER_PASSWORD=changeMePlease
-      - MQTT_BROKER_LADDR=
-      - APP_RPC_LADDR=
-      - LOG_LEVEL=trace
+      - RELAY_PORT=
+      - MQTT_USERNAME=
+      - MQTT_PASSWORD=
+      - MQTT_BROKER_PORT=
+      - LOG_LEVEL=
     ports:
       - "3000:3000"
       - "1883:1883"
-    image: "relay.lattice-connect.public.dappnode.eth:0.1.0"
-  wallet:
-    build: ./build-ui
-    restart: unless-stopped
-    image: "wallet.lattice-connect.public.dappnode.eth:0.1.0"
+    image: "relay.lattice-connect.dnp.dappnode.eth:1.0.0"

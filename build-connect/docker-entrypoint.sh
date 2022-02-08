@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #delete default config
 
 if [[ -z $PUBLIC_ADDRESS ]]; then
@@ -9,18 +8,16 @@ fi
 
 cat > config.js << EOF
 module.exports = {
-  APP_HOST: "0.0.0.0",
-  APP_PORT: ${APP_RPC_LADDR:-3000},
+  APP_HOST: '0.0.0.0',
+  APP_PORT: ${RELAY_PORT:-3000},
   LOG_DEST: '/tmp/lattice-connector.log',
-  LOG_LEVEL: '${LOG_LEVEL:-debug}', // trace, debug, info, warn, error
-  MQTT: {
-    CLIENT_ID: '${PUBLIC_ADDRESS}',
-    USERNAME: '${BROKER_USERNAME}',
-    PASSWORD: '${BROKER_PASSWORD}',
-    BROKER_PORT: ${MQTT_BROKER_LADDR:-1883},
-  },
+  LOG_LEVEL: '${LOG_LEVEL:-info}', // trace, debug, info, warn, error
+  MQTT_CLIENT_ID: '${PUBLIC_ADDRESS}',
+  MQTT_USERNAME: '${MQTT_USERNAME}',
+  MQTT_PASSWORD: '${MQTT_PASSWORD}',
+  MQTT_BROKER_PORT: ${MQTT_BROKER_PORT:-1883},
   TIMEOUT_ITER_MS: 500,
-  TIMEOUT_TOTAL_MS: 60000,
+  TIMEOUT_TOTAL_MS: 60000
 }
 EOF
 

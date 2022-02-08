@@ -2,52 +2,49 @@
 
 [![DAppNodeStore Available](https://img.shields.io/badge/DAppNodeStore-Available-brightgreen.svg)](http://my.dappnode/#/installer/lattice-connect.public.dappnode.eth)
 
+[![Grid Plus github](https://img.shields.io/badge/GithubRepo-blue.svg)](https://github.com/gridplus/lattice-connect) (Official)
 
-[![Grid Plus github](https://img.shields.io/badge/GithubRepo-blue.svg)](https://github.com/gridplus/lattice-connect)
+Lattice-Connect is a self hosted relay service for your GridPlus Lattice1 - it allows you to avoid using GridPlus' centralized relay service and host your own. See their official GitHubRepo above for more information.
 
-Lattice Connect lets you host your own server for managing your Lattice1's connections.
+This package exposes `3000` for the lattice-connect relay and `1883` for the MQTT broker.
 
+**WARNING: The default GridPlus Wallet (https://lattice.gridplus.io/) is only accessible over HTTPS. You'll need to install the Lattice-Manager package to manage your Lattice1.**
 
-You can use this package without installing it in your DAppNode following these instructions:
+Follow these instructions on your lattice1 to connect (SSH to your Lattice1):
 
-## Prerequisites
+```
+# Stop Services
+service gpd stop
+service mosquitto stop
 
-- git
+# Point Lattice1 at lattice-connect
+uci set gridplus.remote_mqtt_address=<DAppNode IP or Container Name>:1883
+uci set gridplus.rabbitmq_password=<MQTT_BROKER_PASSWORD>
+uci commit
 
-  Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) commandline tool.
+# Remove the SSL/TLS Requirement (communication is still end-to-end encrypted)
+sed -i 's/^bridge_capath/#bridge_capath/' /etc/init.d/mosquitto
 
-- docker
+# Start Services
+service mosquitto start
+service gpd start
+```
 
-  Install [docker](https://docs.docker.com/engine/installation). The community edition (docker-ce) will work. In Linux make sure you grant permissions to the current user to use docker by adding current user to docker group, `sudo usermod -aG docker $USER`. Once you update the users group, exit from the current terminal and open a new one to make effect.
+If your Lattice1 is connected to the DAppNode WiFi you can use the container name (e.g `lattice-connect.dappnode`) otherwise you can use the IP of the DappNode itself. The package automatically exposes the ports required.
 
-- docker-compose
+You set the `MQTT_BROKER_PASSWORD` when setting up this package in the Wizard, if you forgot it you can look under the Package config tab.
 
-  Install [docker-compose](https://docs.docker.com/compose/install)
+If everything was setup correctly you should be able to test the service using the following command (replace Device ID with your Lattice1's Device ID):
 
-**Note**: Make sure you can run `git`, `docker ps`, `docker-compose` without any issue and without sudo command.
+```bash
+wget -O- --post-data='[1,2,3]' --header='Content-Type:application/json' 'http://<DAppNode IP or Container Name>:3000/<Device ID>'
+```
 
+Expected output is something like this:
 
-## Buidling
-
-`docker-compose build`
-
-## Running
-
-### Start
-
-`docker-compose up -d`
-
-### View logs
-
-`docker-compose logs -f`
-
-### Stop
-
-`docker-compose down`
-
-You can edit the `docker-compose.yml` and add extra options
-
-
-## License
-
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details
+```
+HTTP request sent, awaiting response... 200 OK
+Length: 81 [application/json]
+Saving to: 'STDOUT'
+2022-02-08 21:07:04 (1.03 MB/s) - written to stdout [81/81]
+```
