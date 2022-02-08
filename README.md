@@ -8,7 +8,9 @@ Lattice-Connect is a self hosted relay service for your GridPlus Lattice1 - it a
 
 This package exposes `3100` for the lattice-connect relay and `1883` for the MQTT broker.
 
-**WARNING: The default GridPlus Wallet (https://lattice.gridplus.io/) is only accessible over HTTPS. You'll need to install the Lattice-Manager package to manage your Lattice1.**
+**WARNING: The default GridPlus Wallet (https://lattice.gridplus.io/) is only accessible over HTTPS. You'll need to install the Lattice-Manager package to manage your Lattice1 OR Expose 3100 over HTTPS whenever you want to upload an ABI pack (this is not recommended)**
+
+If you don't want to install the Lattice-Manager you can turn the HTTPS access on/off as needed.
 
 Follow these instructions on your lattice1 to connect (SSH to your Lattice1):
 

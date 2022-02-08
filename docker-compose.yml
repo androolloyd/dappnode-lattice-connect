@@ -15,4 +15,4 @@ services:
     ports:
       - "3100:3100"
       - "1883:1883"
-    image: "relay.lattice-connect.dnp.dappnode.eth:1.0.0"
+    image: "relay.lattice-connect.dnp.dappnode.eth:0.2.0"
