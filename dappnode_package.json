@@ -7,7 +7,7 @@
   "type": "service",
   "architectures": ["linux/amd64", "linux/arm64"],
   "exposable": [],
-  "author": "mysticryuujin <mysticryuujin@gmail.com> (https://github.com/mysticryuujin)",
+  "author": "MysticRyuujin <MysticRyuujin@gmail.com> (https://github.com/MysticRyuujin)",
   "contributors": [
     "androolloyd <opensource@andrewredden.com> (https://github.com/androolloyd)"
   ],
@@ -19,10 +19,11 @@
   "backup": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mysticryuujin/dappnode-lattice-connect"
+    "url": "https://github.com/MysticRyuujin/dappnode-lattice-connect"
   },
   "links": {
-    "homepage": "https://github.com/MysticRyuujin/dappnode-lattice-connect"
+    "homepage": "https://github.com/MysticRyuujin/dappnode-lattice-connect",
+    "lattice-manager": "https://github.com/MysticRyuujin/dappnode-lattice-manager"
   },
   "license": "GPL v3"
 }

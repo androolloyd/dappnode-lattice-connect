@@ -1,4 +1,4 @@
-# Lattice-Connect DAppNode package
+# Lattice-Connect DAppNode Package
 
 [![DAppNodeStore Available](https://img.shields.io/badge/DAppNodeStore-Available-brightgreen.svg)](http://my.dappnode/#/installer/lattice-connect.public.dappnode.eth)
 
@@ -6,7 +6,7 @@
 
 Lattice-Connect is a self hosted relay service for your GridPlus Lattice1 - it allows you to avoid using GridPlus' centralized relay service and host your own. See their official GitHubRepo above for more information.
 
-This package exposes `3000` for the lattice-connect relay and `1883` for the MQTT broker.
+This package exposes `3100` for the lattice-connect relay and `1883` for the MQTT broker.
 
 **WARNING: The default GridPlus Wallet (https://lattice.gridplus.io/) is only accessible over HTTPS. You'll need to install the Lattice-Manager package to manage your Lattice1.**
 
@@ -37,7 +37,7 @@ You set the `MQTT_BROKER_PASSWORD` when setting up this package in the Wizard, i
 If everything was setup correctly you should be able to test the service using the following command (replace Device ID with your Lattice1's Device ID):
 
 ```bash
-wget -O- --post-data='[1,2,3]' --header='Content-Type:application/json' 'http://<DAppNode IP or Container Name>:3000/<Device ID>'
+wget -O- --post-data='[1,2,3]' --header='Content-Type:application/json' 'http://<DAppNode IP or Container Name>:3100/<Device ID>'
 ```
 
 Expected output is something like this:
