@@ -5,5 +5,11 @@
       "http://localhost:5001": "Wed, 09 Feb 2022 00:22:19 GMT"
     },
     "link": "https://dappnode.github.io/sdk-publish/?r=lattice-connect.dnp.dappnode.eth&v=1.0.0&h=%2Fipfs%2FQmRPYnnRGyGEXXBVeXJ1eGXx1iPewpaZirkm1s5Qvi5TCF&d=0x8aE6422631292c31aeeB2efe154d6326f703F46b"
+  },
+  "1.1.0": {
+    "hash": "/ipfs/QmZTS8wSoQe4XuvrqvUaqNZKX1cJbBG7hcgAkcAuBzkCHT",
+    "uploadedTo": {
+      "http://localhost:5001": "Wed, 09 Feb 2022 16:51:28 GMT"
+    }
   }
 }

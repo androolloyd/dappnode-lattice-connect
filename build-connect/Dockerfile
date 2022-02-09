@@ -4,7 +4,7 @@ WORKDIR /opt/lattice
 
 ARG RELEASE_TAG
 
-RUN apk add --no-cache unbound-dev bash gmp-dev g++ gcc make python2 git \
+RUN apk add bash git \
  && git clone --branch ${RELEASE_TAG} https://github.com/GridPlus/lattice-connect.git /opt/lattice \
  && npm install && npm run build
 

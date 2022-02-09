@@ -8,11 +8,13 @@ Lattice-Connect is a self hosted relay service for your GridPlus Lattice1 - it a
 
 This package exposes `3000` for the lattice-connect relay and `1883` for the MQTT broker.
 
-**WARNING: The default GridPlus Wallet (https://lattice.gridplus.io/) is only accessible over HTTPS. You'll need to install the [Lattice-Manager](https://github.com/MysticRyuujin/dappnode-lattice-manager) package to manage your Lattice1 OR Expose 3000 over HTTPS whenever you want to upload an ABI pack OR when configuring MetaMask for the first time (this is not recommended)**
+**WARNING: The default GridPlus Wallet (https://lattice.gridplus.io/) is only accessible over HTTPS. You'll need to install the [Lattice-Manager](https://github.com/MysticRyuujin/dappnode-lattice-manager) package to manage your Lattice1 or expose port 3000 over HTTPS in the package's network settings whenever you want to upload an ABI pack OR when configuring MetaMask for the first time (this is not recommended). You should remove this mapping when not in use. MetaMask only needs it during initial setup.**
 
 You can get around this requirement by using [Frame](https://frame.sh/)
 
 Follow these instructions on your Lattice1 to connect (SSH to your Lattice1):
+
+** NOTE: DNS on the Lattice1 sucks, I recommend just using IP **
 
 ```
 # Stop Services
@@ -46,7 +48,7 @@ Expected output is something like this:
 
 ```
 HTTP request sent, awaiting response... 200 OK
-Length: 81 [application/json]
+Length: 151 [application/json]
 Saving to: 'STDOUT'
 2022-02-08 21:07:04 (1.03 MB/s) - written to stdout [81/81]
 ```
