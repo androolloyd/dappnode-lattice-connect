@@ -13,6 +13,6 @@ services:
       - MQTT_BROKER_PORT=
       - LOG_LEVEL=
     ports:
-      - "3100:3100"
+      - "3000:3000"
       - "1883:1883"
-    image: "relay.lattice-connect.dnp.dappnode.eth:0.2.0"
+    image: "relay.lattice-connect.dnp.dappnode.eth:1.0.0"

@@ -1,18 +1,12 @@
 {
   "name": "lattice-connect.dnp.dappnode.eth",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "upstreamVersion": "master",
   "shortDescription": "GridPlus Lattice-Connect",
   "description": "GridPlus Lattice-Connect is a self hosted encrypted message relay for your GridPlus Lattice1",
   "type": "service",
   "architectures": ["linux/amd64", "linux/arm64"],
-  "exposable": [
-    {
-      "name": "Lattice-Connect Relay Service",
-      "description": "Allows you to access the Relay over HTTPS",
-      "port": 3100
-    }
-  ],
+  "exposable": [],
   "author": "MysticRyuujin <MysticRyuujin@gmail.com> (https://github.com/MysticRyuujin)",
   "contributors": [
     "androolloyd <opensource@andrewredden.com> (https://github.com/androolloyd)"
