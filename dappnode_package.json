@@ -1,6 +1,6 @@
 {
-  "name": "lattice-connect.dnp.dappnode.eth",
-  "version": "1.1.0",
+  "name": "lattice-connect.public.dappnode.eth",
+  "version": "1.1.1",
   "upstreamVersion": "master",
   "shortDescription": "GridPlus Lattice-Connect",
   "description": "GridPlus Lattice-Connect is a self hosted encrypted message relay for your GridPlus Lattice1",

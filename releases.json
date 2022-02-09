@@ -11,5 +11,12 @@
     "uploadedTo": {
       "http://localhost:5001": "Wed, 09 Feb 2022 16:51:28 GMT"
     }
+  },
+  "1.1.1": {
+    "hash": "/ipfs/QmZ3ugvAo1XMwkjqYH1ZF4UmBsSeenNC7m7yVoekR7F873",
+    "uploadedTo": {
+      "http://localhost:5001": "Wed, 09 Feb 2022 18:44:01 GMT"
+    },
+    "link": "https://dappnode.github.io/sdk-publish/?r=lattice-connect.public.dappnode.eth&v=1.1.1&h=%2Fipfs%2FQmZ3ugvAo1XMwkjqYH1ZF4UmBsSeenNC7m7yVoekR7F873&d=0x8aE6422631292c31aeeB2efe154d6326f703F46b"
   }
 }
