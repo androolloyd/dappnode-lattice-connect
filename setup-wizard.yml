@@ -10,6 +10,7 @@ fields:
       Username for the MQTT Broker (Recommended: Generate Random Username)
     secret: false
     required: true
+  
   - id: MQTT_PASSWORD
     target:
       type: environment

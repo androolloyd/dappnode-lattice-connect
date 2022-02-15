@@ -6,7 +6,7 @@
 
 Lattice-Connect is a self hosted relay service for your GridPlus Lattice1 - it allows you to avoid using GridPlus' centralized relay service and host your own. See their official GitHubRepo above for more information.
 
-This package exposes `3000` for the lattice-connect relay and `1883` for the MQTT broker.
+This package exposes `3000/tcp` for the lattice-connect relay and `1883/tcp` for the MQTT broker.
 
 **WARNING: The default GridPlus Wallet (https://lattice.gridplus.io/) is only accessible over HTTPS. You'll need to install the [Lattice-Manager](https://github.com/MysticRyuujin/dappnode-lattice-manager) package to manage your Lattice1 or expose port 3000 over HTTPS in the package's network settings whenever you want to upload an ABI pack OR when configuring MetaMask for the first time (this is not recommended). You should remove this mapping when not in use. MetaMask only needs it during initial setup.**
 
@@ -14,7 +14,7 @@ You can get around this requirement by using [Frame](https://frame.sh/)
 
 Follow these instructions on your Lattice1 to connect (SSH to your Lattice1):
 
-** NOTE: DNS on the Lattice1 sucks, I recommend just using IP **
+** NOTE: DNS on the Lattice1 sucks, I recommend just using the IP **
 
 ```
 # Stop Services
@@ -52,3 +52,7 @@ Length: 151 [application/json]
 Saving to: 'STDOUT'
 2022-02-08 21:07:04 (1.03 MB/s) - written to stdout [81/81]
 ```
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details

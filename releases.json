@@ -13,10 +13,10 @@
     }
   },
   "1.1.1": {
-    "hash": "/ipfs/QmZ3ugvAo1XMwkjqYH1ZF4UmBsSeenNC7m7yVoekR7F873",
+    "hash": "/ipfs/QmZKngoW6nniAmGXhyjgQwwkTGMAaLagyBXSURKHdXVbZR",
     "uploadedTo": {
-      "http://localhost:5001": "Wed, 09 Feb 2022 18:44:01 GMT"
+      "http://localhost:5001": "Tue, 15 Feb 2022 00:37:15 GMT"
     },
-    "link": "https://dappnode.github.io/sdk-publish/?r=lattice-connect.public.dappnode.eth&v=1.1.1&h=%2Fipfs%2FQmZ3ugvAo1XMwkjqYH1ZF4UmBsSeenNC7m7yVoekR7F873&d=0x8aE6422631292c31aeeB2efe154d6326f703F46b"
+    "link": "https://dappnode.github.io/sdk-publish/?r=lattice-connect.public.dappnode.eth&v=1.1.1&h=%2Fipfs%2FQmZKngoW6nniAmGXhyjgQwwkTGMAaLagyBXSURKHdXVbZR&d=0x8aE6422631292c31aeeB2efe154d6326f703F46b"
   }
 }
