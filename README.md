@@ -34,6 +34,10 @@ service mosquitto start
 service gpd start
 ```
 
+If you happen to have issues SSHing into the Lattice1 you might need to enable ssh-rsa in your host's config.
+
+`ssh -oHostKeyAlgorithms=+ssh-rsa`
+
 If your Lattice1 is connected to the DAppNode WiFi you can use the container name (e.g `lattice-connect.public.dappnode`) otherwise you can use the IP of the DappNode itself. The package automatically exposes the ports required.
 
 You set the `MQTT_BROKER_PASSWORD` when setting up this package in the Wizard, if you forgot it you can look under the Package config tab.
