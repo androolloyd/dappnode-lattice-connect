@@ -1,6 +1,6 @@
 # Lattice-Connect DAppNode Package
 
-[![DAppNodeStore Unavailable](https://img.shields.io/badge/DAppNodeStore-Unavailable-red.svg)](http://my.dappnode/#/installer/lattice-connect.public.dappnode.eth)
+[![DAppNodeStore Unavailable](https://img.shields.io/badge/DAppNodeStore-Unavailable-red.svg)](http://my.dappnode/#/installer/%2Fipfs%2FQmccCitbxoan5f4SfBJQfTFrActiaMz3EU8ixvNRZj79Pa)
 
 (Because I get EVM errors trying to publish it and nobody know why...just use the IPFS hash in the release)
 
