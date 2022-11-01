@@ -14,6 +14,8 @@ This package exposes a random DAppNode host port to the internal port of `8080/t
 
 In the Setup Wizard you will be asked a URL for the Lattice1 - if your Lattice1 is connected to the DAppNode WiFi then you may be able to use the built in `GridPlus-xxxxxxxxxxx.local` name (I have not tried this). However, on my network the Lattice is connected externally so it's on the same LAN, but not "inside" the DAppNode VPN, therefor I just use a static IP address or DNS name on my network.
 
+In v1 your Lattice1 would "call home" to the relay, in v2 the relay initiates the connection to the Lattice1 - This means that if you have a firewall between the DAppNode and your Lattice1 - you must allow `TCP Port 1883` through your firewall.
+
 **WARNING: The default GridPlus Wallet [lattice.gridplus.io](https://lattice.gridplus.io/) is only accessible over HTTPS. You'll need to install the [Lattice-Manager](https://github.com/MysticRyuujin/dappnode-lattice-manager) package to manage your Lattice1 or expose port 8080 over HTTPS in the package's network settings when configuring MetaMask for the first time (this is not recommended). You should remove this mapping when not in use. MetaMask only needs it during initial setup.**
 
 You can get around this requirement by using [Frame](https://frame.sh/)

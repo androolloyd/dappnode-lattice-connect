@@ -11,6 +11,7 @@ services:
       - APP_SERVICE_PORT=8080
       - MQTT_HTTP_PORT=1883
       - MQTT_SKIP_USER_CHECK=1
+      - APP_WORKER_COUNT=
     ports:
       - "8080"
     image: "relay.lattice-connect.public.dappnode.eth:2.0.0"
