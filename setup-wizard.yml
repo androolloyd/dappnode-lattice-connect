@@ -8,6 +8,6 @@ fields:
     title: Lattice Name
     description: >-
       Lattice Name e.g. "GridPlus-xxxxxxxxxxx" (or IP)
-    pattern: '^GridPlus-[a-zA-Z0-f]{11}$|^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$'
+    pattern: '^GridPlus-[a-zA-Z0-f]{11}\.local$|^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$'
     secret: false
     required: true
