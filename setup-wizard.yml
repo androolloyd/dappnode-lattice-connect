@@ -1,13 +1,12 @@
 version: "2"
 fields:
-  - id: LATTICE_NAME
+  - id: ADMIN_CLIENT_HOST
     target:
       type: environment
-      name: LATTICE_NAME
+      name: ADMIN_CLIENT_HOST
       service: relay
-    title: Lattice Name
+    title: Lattice URL
     description: >-
-      Lattice Name e.g. "GridPlus-xxxxxxxxxxx.local" (or IP)
-    pattern: '^GridPlus-[a-zA-Z0-f]{11}\.local$|^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$'
+      Lattice URL e.g. "http://GridPlus-xxxxxxxxxxx.local" or "http://192.168.1.69"
     secret: false
     required: true

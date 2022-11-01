@@ -17,12 +17,9 @@ RUN git clone https://github.com/GridPlus/lattice-connect-v2.git /build/lattice-
  && npm prune --production && rm -rf node_modules/typescript
 
 FROM node:16-alpine AS app
-RUN apk add --no-cache bash
 COPY --from=builder /build/lattice-connect-v2/connect/dist /app/dist
 COPY --from=builder /build/lattice-connect-v2/connect/node_modules /app/node_modules
 
-COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-
 EXPOSE 8080
 
-ENTRYPOINT ["bash", "/usr/local/bin/docker-entrypoint.sh"]
+CMD NODE_ENV=production node /app/dist/direct.js

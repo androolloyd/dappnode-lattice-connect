@@ -15,7 +15,7 @@
   ],
   "categories": ["Developer tools", "Communications"],
   "keywords": ["lattice-connect", "gridplus", "lattice1", "relay"],
-  "globalEnvs": {},
+  "globalEnvs": [],
   "backup": [],
   "repository": {
     "type": "git",
