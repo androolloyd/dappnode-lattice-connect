@@ -1,26 +1,9 @@
 #!/bin/bash
 
-#delete default config
-
-if [[ -z $PUBLIC_ADDRESS ]]; then
- PUBLIC_ADDRESS=$_DAPPNODE_GLOBAL_HOSTNAME
-fi
-
-cat > config.js << EOF
-module.exports = {
-  APP_HOST: '0.0.0.0',
-  APP_PORT: ${RELAY_PORT:-3000},
-  LOG_DEST: '/tmp/lattice-connector.log',
-  LOG_LEVEL: '${LOG_LEVEL:-info}', // trace, debug, info, warn, error
-  MQTT_CLIENT_ID: '${PUBLIC_ADDRESS}',
-  MQTT_USERNAME: '${MQTT_USERNAME}',
-  MQTT_PASSWORD: '${MQTT_PASSWORD}',
-  MQTT_BROKER_PORT: ${MQTT_BROKER_PORT:-1883},
-  TIMEOUT_ITER_MS: 500,
-  TIMEOUT_TOTAL_MS: 60000
-}
-EOF
-
 set -ex
 
-(cd /opt/lattice && node dist/index.js --name lattice-connect --watch)
+export ADMIN_CLIENT_HOST=http://${LATTICE_NAME}
+
+export NODE_ENV=production
+
+node /app/dist/direct.js

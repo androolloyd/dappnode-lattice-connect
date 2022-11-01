@@ -18,5 +18,11 @@
       "http://localhost:5001": "Tue, 15 Feb 2022 00:37:15 GMT"
     },
     "link": "https://dappnode.github.io/sdk-publish/?r=lattice-connect.public.dappnode.eth&v=1.1.1&h=%2Fipfs%2FQmZKngoW6nniAmGXhyjgQwwkTGMAaLagyBXSURKHdXVbZR&d=0x8aE6422631292c31aeeB2efe154d6326f703F46b"
+  },
+  "2.0.0": {
+    "hash": "/ipfs/QmRk5xiGSRyqEJ2QDmqHFBy1NmhKnHDip495AKmsc7fEp9",
+    "uploadedTo": {
+      "http://localhost:5001": "Tue, 01 Nov 2022 17:09:16 GMT"
+    }
   }
 }

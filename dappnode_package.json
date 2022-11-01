@@ -1,13 +1,13 @@
 {
   "name": "lattice-connect.public.dappnode.eth",
-  "version": "1.1.1",
-  "upstreamVersion": "v0.2.2",
-  "upstreamRepo": "GridPlus/lattice-connect",
+  "version": "2.0.0",
+  "upstreamVersion": "main",
+  "upstreamRepo": "GridPlus/lattice-connect-v2",
   "shortDescription": "GridPlus Lattice-Connect",
   "description": "GridPlus Lattice-Connect is a self hosted encrypted message relay for your GridPlus Lattice1",
   "mainService": "relay",
   "type": "service",
-  "architectures": ["linux/amd64", "linux/arm64"],
+  "architectures": ["linux/amd64"],
   "exposable": [],
   "author": "MysticRyuujin <MysticRyuujin@gmail.com> (https://github.com/MysticRyuujin)",
   "contributors": [
@@ -15,9 +15,7 @@
   ],
   "categories": ["Developer tools", "Communications"],
   "keywords": ["lattice-connect", "gridplus", "lattice1", "relay"],
-  "globalEnvs": {
-    "all": true
-  },
+  "globalEnvs": {},
   "backup": [],
   "repository": {
     "type": "git",

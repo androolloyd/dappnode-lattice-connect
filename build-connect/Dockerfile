@@ -1,12 +1,25 @@
-FROM node:12-alpine
+FROM ubuntu:22.04 AS base
 
-WORKDIR /opt/lattice
+RUN apt-get update && \
+    apt-get install -y curl git
 
-ARG RELEASE_TAG
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
+    apt-get install -y nodejs
 
-RUN apk add bash git \
- && git clone --branch ${RELEASE_TAG} https://github.com/GridPlus/lattice-connect.git /opt/lattice \
- && npm install && npm run build
+FROM base AS builder
+
+WORKDIR /build/lattice-connect-v2
+
+ARG RELEASE_TAG=main
+
+RUN git clone https://github.com/GridPlus/lattice-connect-v2.git /build/lattice-connect-v2 \
+ && git checkout ${RELEASE_TAG} && cd connect && npm i && npx tsc --build tsconfig.json \
+ && npm prune --production && rm -rf node_modules/typescript
+
+FROM node:16-alpine AS app
+RUN apk add --no-cache bash
+COPY --from=builder /build/lattice-connect-v2/connect/dist /app/dist
+COPY --from=builder /build/lattice-connect-v2/connect/node_modules /app/node_modules
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 

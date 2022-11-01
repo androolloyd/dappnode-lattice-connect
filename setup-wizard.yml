@@ -1,23 +1,13 @@
 version: "2"
 fields:
-  - id: MQTT_USERNAME
+  - id: LATTICE_NAME
     target:
       type: environment
-      name: MQTT_USERNAME
+      name: LATTICE_NAME
       service: relay
-    title: MQTT Broker Username
+    title: Lattice Name
     description: >-
-      Username for the MQTT Broker (Recommended: Generate Random Username)
+      Lattice Name e.g. "GridPlus-xxxxxxxxxxx" (or IP)
+    pattern: '^GridPlus-[a-zA-Z0-f]{11}$|^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$'
     secret: false
-    required: true
-  
-  - id: MQTT_PASSWORD
-    target:
-      type: environment
-      name: MQTT_PASSWORD
-      service: relay
-    title: MQTT Broker Password
-    description: >-
-      Password for the MQTT Broker (Recommended: Generate Random Password)
-    secret: true
     required: true

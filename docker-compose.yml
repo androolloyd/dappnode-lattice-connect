@@ -4,17 +4,16 @@ services:
     build:
       context: ./build-connect
       args:
-        RELEASE_TAG: v0.2.2
+        RELEASE_TAG: f7e7651011dca523bbb1b5e80e87466b68a56163
     restart: unless-stopped
     environment:
-      - RELAY_PORT=
-      - MQTT_USERNAME=
-      - MQTT_PASSWORD=
-      - MQTT_BROKER_PORT=
-      - LOG_LEVEL=
+      - APP_SERVICE_PORT=8080
+      - APP_WORKER_COUNT=2
+      - MQTT_HTTP_PORT=1883
+      - MQTT_SKIP_USER_CHECK=1
+      - LATTICE_NAME=
     ports:
-      - "3000:3000"
-      - "1883:1883"
-    image: "relay.lattice-connect.public.dappnode.eth:1.1.1"
+      - "3000:8080"
+    image: "relay.lattice-connect.public.dappnode.eth:2.0.0"
 volumes:
   lattice-connect: {}
