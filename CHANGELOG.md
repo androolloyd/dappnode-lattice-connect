@@ -3,6 +3,7 @@
 ## [2.0.0]
 
 * Update to v2
+* Remove arm64 support due to build issues
 
 ## [1.1.0]
 
