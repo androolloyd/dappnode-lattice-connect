@@ -13,7 +13,7 @@ services:
       - MQTT_SKIP_USER_CHECK=1
       - LATTICE_NAME=
     ports:
-      - "3000:8080"
+      - "8080"
     image: "relay.lattice-connect.public.dappnode.eth:2.0.0"
 volumes:
   lattice-connect: {}

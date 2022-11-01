@@ -23,4 +23,6 @@ COPY --from=builder /build/lattice-connect-v2/connect/node_modules /app/node_mod
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
+EXPOSE 8080
+
 ENTRYPOINT ["bash", "/usr/local/bin/docker-entrypoint.sh"]
