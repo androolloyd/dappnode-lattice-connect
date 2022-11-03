@@ -1,6 +1,6 @@
 {
   "name": "lattice-connect.public.dappnode.eth",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "upstreamVersion": "main",
   "upstreamRepo": "GridPlus/lattice-connect-v2",
   "shortDescription": "GridPlus Lattice-Connect",

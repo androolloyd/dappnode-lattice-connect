@@ -4,7 +4,7 @@ services:
     build:
       context: ./build-connect
       args:
-        RELEASE_TAG: f7e7651011dca523bbb1b5e80e87466b68a56163
+        RELEASE_TAG: 52d62410d16eb394e2253360a6c679c02a7742a6
     restart: unless-stopped
     environment:
       - ADMIN_CLIENT_HOST=
@@ -14,6 +14,6 @@ services:
       - APP_WORKER_COUNT=
     ports:
       - "8080"
-    image: "relay.lattice-connect.public.dappnode.eth:2.0.0"
+    image: "relay.lattice-connect.public.dappnode.eth:1.0.0"
 volumes:
   lattice-connect: {}
